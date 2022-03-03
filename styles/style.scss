@@ -1,0 +1,91 @@
+@import "navbar";
+@import "colors";
+@import "media-queires";
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: "kumbh Sans", sans-serif;
+}
+
+// ? Hero Section
+
+.hero {
+	background-color: $light;
+	&__container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		justify-items: center;
+		margin: 0 auto;
+		height: 100vh;
+		z-index: 1;
+		width: 100%;
+		max-width: 1200px;
+		padding-left: 24px;
+		padding-right: 24px;
+
+		@include tablet {
+			grid-template-columns: 1fr;
+			height: 100%;
+		}
+		&--left {
+			width: 100%;
+			line-height: 1.2;
+			@include tablet {
+				padding: 5rem 0;
+			}
+			@include mobile {
+				line-height: 1.5;
+			}
+
+			h1 {
+				font-size: 4rem;
+				color: $lime;
+				@include mobile {
+					font-size: 1.5rem;
+				}
+			}
+
+			h2 {
+				font-size: 4rem;
+				color: $dark;
+				@include mobile {
+					font-size: 2rem;
+				}
+			}
+			p {
+				font-size: 1.5rem;
+				color: $dark;
+				margin-top: 1rem;
+				font-weight: 700;
+				@include mobile {
+					font-size: 1.5rem;
+				}
+			}
+		}
+		&--btn {
+			font-size: 1rem;
+			background-color: $lime;
+			padding: 14px 32px;
+			border: none;
+			border-radius: 50px;
+			color: $light;
+			margin-top: 2rem;
+			cursor: pointer;
+			position: relative;
+			outline: none;
+			transition: all 0.3s ease;
+
+			&:hover {
+				background-color: $orangeRed;
+				transition: all 0.3s ease;
+			}
+		}
+
+		&--right img {
+			width: 550px;
+		}
+	}
+}
